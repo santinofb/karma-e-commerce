@@ -72,6 +72,11 @@ aside {
     gap: 1rem;
     font-weight: 600;
     padding: 1rem;
+    transition: transform .2s;
+}
+
+.boton-menu:hover {
+    transform: scale(1.1);
 }
 
 .boton-menu.active {
@@ -112,6 +117,14 @@ footer {
 .redes {
     display: flex;
     gap: 1rem;
+}
+
+.redes li:hover {
+    transform: scale(1.1);
+}
+
+.redes li{
+    transition: transform .2s;
 }
 
 /* main */
@@ -211,11 +224,11 @@ main {
 }
 
 .carrito-producto-eliminar {
-     border: 0;
-     background-color: transparent;
-     color: var(--clr-red);
-     font-size: 1rem;
-     cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-red);
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .carrito-acciones {
@@ -257,6 +270,12 @@ main {
     color: var(--clr-withe);
     text-transform: uppercase;
     cursor: pointer;
+    transition: transform .2s, border-radius .2s;
+}
+
+.carrito-acciones-comprar:hover {
+    transform: scale(1.1);
+    border-radius: 1rem;
 }
 
 .disabled {
