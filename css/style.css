@@ -5,6 +5,7 @@
     --clr-main: #ddd000; 
     --clr-withe: #ececec;
     --clr-gray: #e2e2e2;
+    --clr-darkgray: #757575;
     --clr-black: #070707;
     --clr-red: #961818;
 }
@@ -32,13 +33,16 @@ a {
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    background-color: var(--clr-main);
 }
 
 /* aside */
 
 aside {
-    padding: 2rem;
+    background-image: url(../img/KARMAfondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: var(--clr-darkgray);
+    background-blend-mode: multiply;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -52,13 +56,15 @@ aside {
     font-family: 'UnifrakturCook';
     font-weight: 400;
     font-size: 2rem;
-    color: var(--clr-black);
+    color: var(--clr-withe);
+    padding: 2rem;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    padding: 2rem;
 }
 
 .boton-menu {
@@ -66,6 +72,7 @@ aside {
     border: 0;
     color: var(--clr-withe);
     font-size: 1rem;
+    text-align: start;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -80,11 +87,7 @@ aside {
 }
 
 .boton-menu.active {
-    background-color: var(--clr-withe);
     color: var(--clr-main);
-    width: 100%;
-    border-radius: 1rem;
-    position: relative;
 }
 
 .boton-carrito {
@@ -93,24 +96,50 @@ aside {
 
 .numerito {
     background-color: var(--clr-withe);
-    color: var(--clr-main);
+    color: var(--clr-black);
     padding: .15rem .25rem;
     border-radius: .25rem;
+}
+
+.boton-categoria{
+    position: relative;
+}
+
+.boton-categoria::before{
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 3rem;
+    width: 70%;
+    height: .20rem;
+    background-color: var(--clr-withe);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: clip-path .2s ease-out;
+}
+
+.boton-categoria:hover::before{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.boton-categoria.active::before{
+    background-color: var(--clr-main);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 footer {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    padding: 2rem;
 }
 
 .texto-footer {
-    color: #ffee00;
+    color: var(--clr-withe);
     font-size: 1rem;
 }
 
 .bi-instagram, .bi-whatsapp {
-    color: #ffee00;
+    color: var(--clr-withe);
     font-size: 1rem;
 }
 
@@ -120,7 +149,7 @@ footer {
 }
 
 .redes li:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .redes li{
@@ -132,7 +161,7 @@ footer {
 main {
     background-color: var(--clr-withe);
     margin-left: 0;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .titulo-principal {
@@ -152,15 +181,30 @@ main {
 }
 
 .producto-detalles {
+    z-index: 1;
     background-color: var(--clr-main);
     color: var(--clr-withe);
     padding: .5rem;
-    border-radius: 1rem;
-    margin-top: -2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-top: -1rem;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: .25rem;
+    position: relative;
+}
+
+.producto-detalles::before{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 1rem 0 var(--clr-main);
 }
 
 .producto-titulo {
