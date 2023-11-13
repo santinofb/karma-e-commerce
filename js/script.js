@@ -10,6 +10,9 @@ fetch("../js/productos.json")
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const btnCategorias = document.querySelectorAll(".boton-categoria");
 const titulosCategorias = document.querySelector("#titulo-principal");
+let btnAgregar = document.querySelectorAll(".producto-agregar");
+const numerito = document.querySelector("#numerito");
+
 
 function cargarProductos(productosElegidos) {
     contenedorProductos.innerHTML = "";
@@ -29,6 +32,8 @@ function cargarProductos(productosElegidos) {
 
         contenedorProductos.append(div);
     })
+
+    actualizarBtnAgregar();
 }
 
 btnCategorias.forEach(boton => {
@@ -47,3 +52,43 @@ btnCategorias.forEach(boton => {
         }
     })
 })
+
+function actualizarBtnAgregar() {
+    btnAgregar = document.querySelectorAll(".producto-agregar");
+    btnAgregar.forEach(boton => {
+        boton.addEventListener("click", agregarCarrito);
+    });
+}
+
+let productosCarrito;
+
+const productosCarritoLS = JSON.parse(localStorage.getItem("productos-carrito"));
+
+if (productosCarritoLS) {
+    productosCarrito = productosCarritoLS;
+    actualizarNumerito();
+} else {
+    productosCarrito = [];
+}
+
+function agregarCarrito(e) {
+    const btnId = e.currentTarget.id;
+    const productoAgregado = productos.find(producto => producto.id === btnId);
+
+    if(productosCarrito.some(producto => producto.id === btnId)) {
+        const index = productosCarrito.findIndex(producto => producto.id === btnId);
+        productosCarrito[index].cantidad++;
+    } else {
+        productoAgregado.cantidad = 1;
+        productosCarrito.push(productoAgregado);
+    }
+
+    actualizarNumerito();
+
+    localStorage.setItem("productos-carrito", JSON.stringify(productosCarrito));
+}
+
+function actualizarNumerito() {
+    let numeritoCarrito = productosCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    numerito.innerText = numeritoCarrito;
+}
