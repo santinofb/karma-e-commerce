@@ -263,7 +263,7 @@ main {
     border-radius: 1rem;
 }
 
-.carrito-contenedor {
+.carrito-producto-titulo {
     display: flex;
     justify-content: space-between;
     width: 185px;
@@ -271,6 +271,7 @@ main {
     overflow: hidden;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    cursor: help;
 }
 
 .carrito-producto-imagen {
