@@ -22,27 +22,34 @@ function cargarProductosCarrito() {
             div.classList.add("carrito-producto");
             div.innerHTML = `
                 <img class="carrito-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
-    
-                <div class="carrito-producto-titulo">
-                    <small>Tiulo</small>
-                    <h3>${producto.titulo}</h3>
+
+                <div class="carrito-contenedor">
+                    <div class="carrito-producto-titulo">
+                        <small>${producto.categoria.nombre}</small>
+                        <h3>${producto.titulo}</h3>
+                    </div>
                 </div>
-    
+
+                <div class="carrito-producto-talle">
+                    <small>Talle</small>
+                    <h3>${producto.talle}</h3>
+                </div>
+        
                 <div class="carrito-producto-cantidad">
                     <small>Cantidad</small>
                     <h3>${producto.cantidad}</h3>
                 </div>
-    
+        
                 <div class="carrito-producto-precio">
                     <small>Precio</small>
                     <h3>$${producto.precio}</h3>
                 </div>
-    
+        
                 <div class="carrito-producto-subtotal">
                     <small>Subtotal</small>
                     <h3>$${producto.precio * producto.cantidad}</h3>
                 </div>
-    
+
                 <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash3-fill"></i></button>
             `;
     

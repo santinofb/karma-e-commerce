@@ -3,6 +3,7 @@
         "id": "camiseta-01",
         "titulo": "NFL Rodgers 12",
         "imagen": "../img/camisetas/01.jpg",
+        "talle": "XL",
         "categoria": {
             "nombre": "Camisetas",
             "id": "camisetas"
@@ -13,6 +14,7 @@
         "id": "camiseta-02",
         "titulo": "Ruggia Scorpion",
         "imagen": "../img/camisetas/02.jpg",
+        "talle": "L",
         "categoria": {
             "nombre": "Camisetas",
             "id": "camisetas"
@@ -23,6 +25,7 @@
         "id": "camiseta-03",
         "titulo": "Disaster Letters",
         "imagen": "../img/camisetas/03.jpg",
+        "talle": "M",
         "categoria": {
             "nombre": "Camisetas",
             "id": "camisetas"
@@ -33,6 +36,7 @@
         "id": "camiseta-04",
         "titulo": "Camiseta Pink",
         "imagen": "../img/camisetas/04.jpg",
+        "talle": "L",
         "categoria": {
             "nombre": "Camisetas",
             "id": "camisetas"
@@ -43,6 +47,7 @@
         "id": "camiseta-05",
         "titulo": "Rusty Coral",
         "imagen": "../img/camisetas/05.jpg",
+        "talle": "XL",
         "categoria": {
             "nombre": "Camisetas",
             "id": "camisetas"
@@ -53,6 +58,7 @@
         "id": "camiseta-06",
         "titulo": "Nike Air Jordan Retro",
         "imagen": "../img/camisetas/06.jpg",
+        "talle": "XL",
         "categoria": {
             "nombre": "Camisetas",
             "id": "camisetas"
@@ -63,6 +69,7 @@
         "id": "camiseta-07",
         "titulo": "Tokyo Future",
         "imagen": "../img/camisetas/07.jpg",
+        "talle": "M",
         "categoria": {
             "nombre": "Camisetas",
             "id": "camisetas"
@@ -73,6 +80,7 @@
         "id": "pantalon-01",
         "titulo": "Jogger Jean",
         "imagen": "../img/pantalones/01.jpg",
+        "talle": "L",
         "categoria": {
             "nombre": "Pantalones",
             "id": "pantalones"
@@ -83,6 +91,7 @@
         "id": "pantalon-02",
         "titulo": "Short Vahos",
         "imagen": "../img/pantalones/02.jpg",
+        "talle": "M",
         "categoria": {
             "nombre": "Pantalones",
             "id": "pantalones"
@@ -93,6 +102,7 @@
         "id": "pantalon-03",
         "titulo": "Jogging Nike",
         "imagen": "../img/pantalones/03.jpg",
+        "talle": "L",
         "categoria": {
             "nombre": "Pantalones",
             "id": "pantalones"
@@ -103,6 +113,7 @@
         "id": "pantalon-04",
         "titulo": "Short Calza",
         "imagen": "../img/pantalones/04.jpg",
+        "talle": "S",
         "categoria": {
             "nombre": "Pantalones",
             "id": "pantalones"
@@ -113,6 +124,7 @@
         "id": "pantalon-05",
         "titulo": "Short Cargo",
         "imagen": "../img/pantalones/05.jpg",
+        "talle": "M",
         "categoria": {
             "nombre": "Pantalones",
             "id": "pantalones"
@@ -123,6 +135,7 @@
         "id": "pantalon-06",
         "titulo": "Short Jean",
         "imagen": "../img/pantalones/06.jpg",
+        "talle": "S",
         "categoria": {
             "nombre": "Pantalones",
             "id": "pantalones"
@@ -133,6 +146,7 @@
         "id": "zapatillas-01",
         "titulo": "Vans SK8-HI",
         "imagen": "../img/zapatillas/01.jpg",
+        "talle": 39,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -143,6 +157,7 @@
         "id": "zapatillas-02",
         "titulo": "Vans SK8-HI 2",
         "imagen": "../img/zapatillas/02.jpg",
+        "talle": 39,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -153,6 +168,7 @@
         "id": "zapatillas-03",
         "titulo": "Nike Air Jordan 1 Low",
         "imagen": "../img/zapatillas/03.jpg",
+        "talle": 42,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -163,6 +179,7 @@
         "id": "zapatillas-04",
         "titulo": "Nike Air Jordan 1 Low",
         "imagen": "../img/zapatillas/04.jpg",
+        "talle": 40,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -173,6 +190,7 @@
         "id": "zapatillas-05",
         "titulo": "Adidas Superstar XLG",
         "imagen": "../img/zapatillas/05.jpg",
+        "talle": 43,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -183,6 +201,7 @@
         "id": "zapatillas-06",
         "titulo": "Nike Air Force 1",
         "imagen": "../img/zapatillas/06.jpg",
+        "talle": 40,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -193,6 +212,7 @@
         "id": "zapatillas-07",
         "titulo": "Nike Air Jordan 1 Mid",
         "imagen": "../img/zapatillas/07.jpg",
+        "talle": 42,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -203,6 +223,7 @@
         "id": "zapatillas-08",
         "titulo": "Nike Air Force 1",
         "imagen": "../img/zapatillas/08.jpg",
+        "talle": 36,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -213,6 +234,7 @@
         "id": "zapatillas-09",
         "titulo": "Vans Old Skool",
         "imagen": "../img/zapatillas/09.jpg",
+        "talle": 38,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -223,6 +245,7 @@
         "id": "zapatillas-10",
         "titulo": "Converse CT All Star Low",
         "imagen": "../img/zapatillas/10.jpg",
+        "talle": 40,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -233,6 +256,7 @@
         "id": "zapatillas-11",
         "titulo": "Adidas Powerphase Benito",
         "imagen": "../img/zapatillas/11.jpg",
+        "talle": 35,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -243,6 +267,7 @@
         "id": "zapatillas-12",
         "titulo": "Nike Air Jordan 1 Mid",
         "imagen": "../img/zapatillas/12.jpg",
+        "talle": 42,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"
@@ -253,6 +278,7 @@
         "id": "zapatillas-13",
         "titulo": "Nike Air Force 1",
         "imagen": "../img/zapatillas/13.jpg",
+        "talle": 39,
         "categoria": {
             "nombre": "Zapatillas",
             "id": "zapatillas"

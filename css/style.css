@@ -211,6 +211,11 @@ main {
     font-size: 1rem;
 }
 
+.producto-informacion {
+    display: flex;
+    justify-content: space-between;
+}
+
 .producto-agregar {
     border: 0;
     background-color: var(--clr-withe);
@@ -256,6 +261,16 @@ main {
     padding: .5rem;
     padding-right: 1.5rem;
     border-radius: 1rem;
+}
+
+.carrito-contenedor {
+    display: flex;
+    justify-content: space-between;
+    width: 185px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .carrito-producto-imagen {
