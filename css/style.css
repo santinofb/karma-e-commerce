@@ -343,6 +343,8 @@ main {
     display: none;
 }
 
+/* responsive */
+
 .header-mobile {
     display: none;
 }
@@ -355,7 +357,6 @@ main {
     display: none;
 }
 
-/* responsive */
 @media screen and (max-width: 1300px) {
     .contenedor-productos {
         grid-template-columns: 1fr 1fr 1fr;
@@ -462,7 +463,7 @@ main {
     }
 
     .footer-mobile {
-        background-color: var(--clr-darkgray);
+        background-color: var(--clr-black);
         padding: 1rem;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -498,5 +499,72 @@ main {
 @media screen and (max-width: 452px) {
     .contenedor-productos {
         grid-template-columns: 1fr;
+    }
+}
+
+/* animaciones  */
+
+.header-mobile {
+    animation: header-mobile linear both;
+    animation-timeline: scroll();
+    animation-range: 0 300px;
+}
+
+@keyframes header-mobile {
+    to {
+        background: rgba(7, 7, 7, .4);
+        backdrop-filter: blur(5px);
+        padding: .5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.header-mobile .logo {
+    animation: header-mobile-logo linear both;
+    animation-timeline: scroll();
+    animation-range: 0 300px;
+}
+
+@keyframes header-mobile-logo {
+    to {
+        font-size: 1.5rem;
+    }
+}
+
+.menu-hamburguesa {
+    animation: header-mobile-menu linear both;
+    animation-timeline: scroll();
+    animation-range: 0 300px;
+}
+
+@keyframes header-mobile-menu {
+    to {
+        font-size: 1.5rem;
+    }
+}
+
+.producto {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+}
+
+.carrito-producto {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        translate: 0 2rem;
+        scale: .9;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0px;
+        scale: 1;
     }
 }
