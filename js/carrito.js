@@ -76,6 +76,28 @@ function actualizarBtnEliminar() {
 }
 
 function eliminarCarrito(e) {
+
+    Toastify({
+        text: "Producto eliminado",
+        duration: 1000,
+        close: false,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: false, // Prevents dismissing of toast on hover
+        style: {
+          background: "#961818",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+          fontSize: ".75rem",
+          cursor: "default"
+        },
+        offset: {
+            x: "1rem", // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: "1rem" // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+
     const btnId = e.currentTarget.id;
     const index = productosCarrito.findIndex(producto => producto.id === btnId); 
 
@@ -87,9 +109,28 @@ function eliminarCarrito(e) {
 
 btnVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {
-    productosCarrito.length = 0;
-    localStorage.setItem("productos-carrito", JSON.stringify(productosCarrito));
-    cargarProductosCarrito();
+
+    Swal.fire({
+        title: "¿Estas seguro?",
+        text: "Se van a eliminar todos tus productos",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, quiero eliminarlos!",
+        cancelButtonText: "Cancelar"
+    }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Eliminados!",
+            text: "Tus productos fueron eliminados.",
+            icon: "success"
+          });
+            productosCarrito.length = 0;
+            localStorage.setItem("productos-carrito", JSON.stringify(productosCarrito));
+            cargarProductosCarrito();
+        }
+    });
 }
 
 function actualizarTotal() {

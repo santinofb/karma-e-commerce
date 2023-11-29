@@ -75,6 +75,28 @@ if (productosCarritoLS) {
 }
 
 function agregarCarrito(e) {
+
+    Toastify({
+        text: "Producto agregado",
+        duration: 1000,
+        close: false,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: false, // Prevents dismissing of toast on hover
+        style: {
+          background: "#ddd000",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+          fontSize: ".75rem",
+          cursor: "default"
+        },
+        offset: {
+            x: "1rem", // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: "1rem" // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+
     const btnId = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === btnId);
 
