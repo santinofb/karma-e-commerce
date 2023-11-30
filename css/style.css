@@ -502,6 +502,42 @@ main {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .carrito-producto {
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        padding-right: .5rem;
+        overflow: hidden;
+    }
+
+    .carrito-producto-eliminar {
+        grid-column: 1 / -1;
+        grid-row: 3 / 3;
+    }
+    
+    .carrito-acciones {
+        flex-direction: column;
+    }
+
+    .carrito-acciones-derecha {
+        flex-direction: row;
+    }
+
+    .carrito-acciones-total {
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0;
+    }
+
+    .carrito-acciones-comprar {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+    }
+
+    .carrito-acciones-vaciar {
+        transform: translateY(0);
+        margin-bottom: 1rem;
+    }
+}
+
 /* animaciones  */
 
 .header-mobile {
